@@ -3,7 +3,8 @@ from openai import OpenAI
 import os
 
 # OpenAI API key
-client = OpenAI(api_key=os.getenv("openai_SECRET_KEY"))
+api_key = st.secrets["OPENAI_SECRET_KEY"]
+client = OpenAI(api_key=api_key)
 
 # Function to get responses from OpenAI
 def generate_response(prompts):
